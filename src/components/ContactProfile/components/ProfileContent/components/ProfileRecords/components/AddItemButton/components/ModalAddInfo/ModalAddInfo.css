@@ -1,0 +1,47 @@
+.ModalAddInfo {
+  padding: 20px;
+}
+.ModalAddInfo__value {
+  margin-top: 7px;
+}
+.ModalAddInfo__label > label,
+.ModalAddInfo__value > label {
+  display: none;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  padding: 15px 15px 0px 15px;
+}
+.ModalAddInfo__label > input[type="text"],
+.ModalAddInfo__value > textarea {
+  width: calc(100% - 30px);
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+  padding: 15px;
+  outline: 0px;
+  border: 0px;
+  border-radius: 3px;
+  box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.05);
+  background-color: #f0f0f0;
+}
+.ModalAddInfo__value > textarea {
+  min-height: 100px;
+  max-height: 100px;
+  resize: none;
+}
+
+/* 
+.ModalAddInfo__label > input[type="text"] {
+  color: #E91E63;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+}
+.ModalAddInfo__value > textarea {
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  line-height: 24px;
+  padding-top: 0px;
+} */

@@ -1,0 +1,93 @@
+.RecordOptions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.RecordOptions__item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  width: 39px;
+  height: 39px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.25s ease 0s;
+}
+.RecordOptions__item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.RecordOptions__item[data-type="options"] {
+  background-color: #ddd;
+}
+.RecordOptions__item[data-type="add"] {
+  width: 50px;
+  background-color: #aaaaaa;
+}
+.RecordOptions__item[data-type="delete"] {
+  background-color: transparent;
+}
+
+.RecordOptions__item:hover {
+  background-color: #777;
+}
+.RecordOptions__item[data-type="options"]:hover {
+  box-shadow: 0px 2px 5px -1px rgba(0, 0, 0, 0.15);
+  background-color: #fff;
+}
+.RecordOptions__item[data-type="add"]:hover {
+  background-color: #43a047;
+}
+.RecordOptions__item[data-type="delete"]:hover {
+  background-color: #ff5722;
+}
+
+.RecordOptions__item > .img {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-size: auto 45%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  transition: all 0.25s ease 0s;
+}
+.RecordOptions__item[data-type="options"] > .img {
+  background-image: url("./images/dots-filled-horizontal-icon.png");
+  background-size: auto 50%;
+  opacity: 0.5;
+}
+.RecordOptions__item[data-type="options"]:hover > .img {
+  /* background-image: url("./images/dots-filled-icon.png"); */
+}
+.RecordOptions__item[data-type="add"] > .img {
+  background-image: url("./images/plus-icon.png");
+  filter: invert(1.0);
+}
+.RecordOptions__item[data-type="delete"] > .img {
+  background-image: url("./images/delete-icon.png");
+  background-size: auto 55%;
+  opacity: 0.35;
+}
+.RecordOptions__item:hover > .img {
+  /* opacity: 1.0;
+  filter: invert(1.0); */
+}
+
+
+.RecordOptions[data-isEditing="true"] .RecordOptions__item {
+  visibility: visible;
+  opacity: 1.0;
+  transform: scale(1.0);
+  transition: all 0.25s ease 0s;
+}
+.RecordOptions[data-isEditing="false"] .RecordOptions__item {
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.25s ease 0s;
+}

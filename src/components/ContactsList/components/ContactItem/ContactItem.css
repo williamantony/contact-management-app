@@ -1,0 +1,97 @@
+.ContactItem {
+  position: relative;
+  width: calc(50% - 14px);
+  border-radius: 5px;
+  margin: 7px;
+  box-shadow: 0px 2px 5px -1px rgba(0, 0, 0, 0.15);
+  background-color: #fff;
+  overflow: hidden;
+  cursor: pointer;
+  transform: scale(1.0);
+  transition: all 0.25s ease 0s;
+}
+.ContactItem:hover {
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.15), 
+              0px 3px 150px -1px rgba(0, 0, 0, 0.15);
+  background-color: #fff;
+  transform: scale(1.025) perspective(1px);
+  opacity: 1.0;
+  z-index: 1;
+}
+
+
+
+.ContactItem__head {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 15px;
+  position: relative;
+  z-index: 999;
+}
+
+
+
+.ContactItem__thumb {
+  min-width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  box-shadow: inset 0px 0px 0px 3px rgba(0, 0, 0, 0.1);
+  background-color: transparent;
+  background-position: bottom center;
+  background-size: 85% auto;
+  background-repeat: no-repeat;
+}
+.ContactItem__thumb--male {
+  background-image: url('./images/boy.png');
+}
+.ContactItem__thumb--female {
+  background-image: url('./images/girl.png');
+}
+
+.ContactItem__headerText {
+  width: 100%;
+  padding-left: 20px;
+}
+.ContactItem__displayName {
+  width: 100%;
+  color: #13599e;
+  font-size: 20px;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+.ContactItem__secondLine {
+  width: 100%;
+  color: rgba(23, 69, 106, 0.60);
+  font-size: 15px;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.25px;
+  margin-top: 2px;
+}
+
+
+
+.ContactItem__body {
+  display: none;
+  padding: 20px;
+}
+
+
+
+.ContactItem__actions {
+  display: none;
+  text-align: right;
+  padding: 5px;
+}
+.ContactItem__actionLink {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  padding: 7px 12px;
+  margin-left: 5px;
+  background-color: #eee;
+}

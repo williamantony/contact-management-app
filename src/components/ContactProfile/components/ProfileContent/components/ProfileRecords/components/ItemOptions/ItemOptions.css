@@ -1,0 +1,40 @@
+.ItemOptions {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  min-width: 35px;
+}
+
+.ItemOptions[data-isEditing="true"] {
+  visibility: visible;
+  opacity: 1.0;
+  transform: scale(1.0);
+  transition: all 0.25s ease 0s;
+}
+.ItemOptions[data-isEditing="false"] {
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.25s ease 0s;
+}
+
+
+
+.ItemOptions__option {
+  width: 35px;
+  height: 35px;
+  background-size: 35% auto;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.ItemOptions__option[data-type="delete"] {
+  background-image: url("./images/x-red-icon.png");
+  opacity: 0.5;
+  filter: grayscale(1.0);
+  transition: all 0.25s ease 0s;
+}
+.ItemOptions__option[data-type="delete"]:hover {
+  filter: grayscale(0);
+  opacity: 0.75;
+}

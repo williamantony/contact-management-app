@@ -1,0 +1,15 @@
+.ContactProfile {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0px auto;
+}
+.ProfileSummary {
+  min-width: 300px;
+  margin: 0px 20px 0px 0px;
+}
+.ProfileContent {
+  width: 100%;
+  max-width: 480px;
+}

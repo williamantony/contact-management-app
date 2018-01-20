@@ -1,0 +1,86 @@
+.ActionButtons {
+  min-width: 140px;
+}
+
+
+
+.Button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  border-radius: 3px;
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+  background-color: #ddd;
+  cursor: pointer;
+  transition: all 0.25s ease 0s;
+}
+.Button:hover {
+  box-shadow: 0px 2px 5px -1px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+
+
+.Button__icon {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.Button__icon[data-type="edit"] {
+  background-image: url("./images/edit-icon.png");
+}
+.Button__icon[data-type="done"] {
+  background-image: url("./images/done-icon.png");
+}
+
+.Button__text {
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.75px;
+  margin-left: 10px;
+  text-transform: capitalize;
+}
+
+
+
+.Button[data-type="edit"] {
+  background-color: #2196F3;
+}
+.Button[data-type="edit"]:hover {
+  background-color: #1e88e5;
+}
+.Button[data-type="edit"] .Button__icon {
+  filter: invert(1.0);
+}
+.Button[data-type="edit"] .Button__text {
+  color: #fff;
+}
+
+
+.Button[data-type="done"] {
+  background-color: #4CAF50;
+}
+.Button[data-type="done"]:hover {
+  background-color: #43a047;
+}
+.Button[data-type="done"] .Button__icon {
+  filter: invert(1.0);
+}
+.Button[data-type="done"] .Button__text {
+  color: #fff;
+}
+
+
+
+
+
+.ActionButtons[data-isEditing="true"] .Button[data-type="edit"],
+.ActionButtons[data-isEditing="false"] .Button[data-type="done"] {
+  display: none;
+}

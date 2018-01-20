@@ -1,0 +1,88 @@
+.Modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: visible;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background-color: rgba(47, 50, 95, 0.75);
+  opacity: 1.0;
+  z-index: 99999;
+  transition: opacity 0.25s ease 0s, visibility 0.25s ease 0s;
+}
+.Modal--hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.25s ease 0s, visibility 0.25s ease 0s;
+}
+
+.ModalBox {
+  visibility: visible;
+  position: relative;
+  width: 480px;
+  max-width: 640px;
+  min-height: 250px;
+  border-radius: 5px;
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.15), 
+              0px 3px 150px -1px rgba(0, 0, 0, 0.15);
+  background-color: #fff;
+  opacity: 1.0;
+  transform: scale(1.0);
+  overflow: hidden;
+  transition: opacity 0.25s ease 0.25s, transform 0.25s ease 0.25s, visibility 0.25s ease 0.25s;
+}
+.Modal--hidden .ModalBox {
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(1.5);
+  transition: opacity 0.25s ease 0s, transform 0.25s ease 0.5s, visibility 0.25s ease 0s;
+}
+
+
+.ModalBox__head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #f0f0f0;
+}
+.ModalBox__text {
+  width: 100%;
+  padding: 15px;
+}
+.ModalBox__head[data-text-centered="true"] {
+  text-align: center;
+}
+.ModalBox__head[data-text-centered="true"][data-closeIcon-hidden="false"] {
+  margin-left: 50px;
+}
+.ModalBox__title {
+  color: #222222;
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.25px;
+}
+.ModalBox__subtitle {
+  color: #555555;
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+.ModalBox__closeIcon {
+  width: 50px;
+  height: 50px;
+  background-image: url('./images/close.png');
+  background-position: center center;
+  background-size: 25% auto;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+  cursor: pointer;
+}
+.ModalBox__head[data-closeIcon-hidden="true"] .ModalBox__closeIcon {
+  display: none;
+}

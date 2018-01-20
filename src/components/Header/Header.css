@@ -1,0 +1,66 @@
+.Header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #1976d2;
+  background-color: #39447f;
+}
+.Header__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  max-width: 1086px;
+  padding: 20px 7px;
+}
+.Header__logo-part {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 35%;
+  min-width: 200px;
+  max-width: 314px;
+}
+.Header__logo > .text {
+  color: #fff;
+  font-size: 28px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.Header__menuIcon {
+  position: relative;
+  width: 50px;
+  min-width: 50px;
+  text-align: center;
+  padding: 15px 0px;
+  cursor: pointer;
+}
+.Header__menuIcon > .line {
+  position: relative;
+  width: 60%;
+  height: 2px;
+  border-radius: 1px;
+  background-color: #fff;
+  margin: 0px auto;
+  transform: scale(1.0);
+  transition: all 0.5s ease 0s;
+}
+.Header__menuIcon > .line:not(:first-child) {
+  margin-top: 6px;
+}
+.Header__menuIcon:hover > .line:nth-child(1) {
+  top: 8px;
+  transform: rotate(45deg);
+}
+.Header__menuIcon:hover > .line:nth-child(2) {
+  transform: scale(0);
+}
+.Header__menuIcon:hover > .line:nth-child(3) {
+  top: -8px;
+  transform: rotate(-45deg);
+}

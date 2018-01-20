@@ -1,0 +1,55 @@
+.AddItemButton {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 50px;
+  border-radius: 3px;
+  margin-top: 5px;
+  background-color: #ddd;
+  cursor: pointer;
+  transition: all 0.25s ease 0s;
+}
+.AddItemButton:hover {
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.15), 
+              0px 3px 150px -1px rgba(0, 0, 0, 0.15);
+  background-color: #fff;
+}
+.AddItemButton__icon {
+  width: 35px;
+  height: 35px;
+  background-image: url("./images/plus-green-icon.png");
+  background-size: 75% auto;
+  background-position: center center;
+  background-repeat: no-repeat;
+  margin-top: -2px;
+  margin-right: 10px;
+  margin-left: 5px;
+  filter: invert(1.0) grayscale(1.0);  
+  transition: all 0.25s ease 0s;
+}
+.AddItemButton:hover > .AddItemButton__icon {
+  filter: invert(0) grayscale(0);
+}
+.AddItemButton__text {
+  color: #222;
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-shadow: 1px 1px 1px #fff;
+  word-spacing: 1px;
+}
+
+.AddItemButton[data-isEditing="true"] {
+  visibility: visible;
+  max-height: 60px;
+  opacity: 1.0;
+}
+.AddItemButton[data-isEditing="false"] {
+  visibility: hidden;
+  max-height: 0px;
+  opacity: 0;
+}
